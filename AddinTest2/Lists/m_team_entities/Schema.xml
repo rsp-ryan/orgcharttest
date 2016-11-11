@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="m_team_entities" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/m_team_entities" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100a589b22a2da4405eaef93c81fbd37ad8" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{a1491009-1a6e-45a7-bae4-a17fbeab5adb}" Name="parent_team" /><FieldRef ID="{237d4901-f3dc-4aaf-9142-4e4460c73b43}" Name="team_color" /><FieldRef ID="{eed3c48d-8cae-4b13-9fad-f878008f1d6c}" Name="team_ID" /><FieldRef ID="{8be40418-b3ef-49b0-a57c-60e744c0cf69}" Name="team_level" /><FieldRef ID="{b6b1dfb9-8322-44d5-ac22-452148b0dfe2}" Name="team_manager" /><FieldRef ID="{c37805ec-74bd-49e0-9f5a-f31d5c039317}" Name="team_members" /><FieldRef ID="{52dbf6ab-d798-4273-b51a-7fd01ccbcd03}" Name="team_name" /><FieldRef ID="{8821a891-039a-4109-b746-abd95d414385}" Name="child_teams" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field ID="{a1491009-1a6e-45a7-bae4-a17fbeab5adb}" Name="parent_team" DisplayName="parent_team" Type="Number" Required="FALSE" Group="Custom Site Columns"></Field><Field ID="{237d4901-f3dc-4aaf-9142-4e4460c73b43}" Name="team_color" DisplayName="team_color" Type="Text" Required="FALSE" Group="Custom Site Columns"></Field><Field ID="{eed3c48d-8cae-4b13-9fad-f878008f1d6c}" Name="team_ID" DisplayName="team_ID" Type="Number" Required="FALSE" Group="Custom Site Columns"></Field><Field ID="{8be40418-b3ef-49b0-a57c-60e744c0cf69}" Name="team_level" DisplayName="team_level" Type="Number" Required="TRUE" Group="Custom Site Columns"></Field><Field ID="{b6b1dfb9-8322-44d5-ac22-452148b0dfe2}" Name="team_manager" DisplayName="team_manager" Type="User" Required="FALSE" Group="Custom Site Columns" List="UserInfo"></Field><Field ID="{c37805ec-74bd-49e0-9f5a-f31d5c039317}" Name="team_members" DisplayName="team_members" Type="UserMulti" Required="FALSE" UserSelectionMode="PeopleOnly" Group="Custom Site Columns" Mult="TRUE"></Field><Field ID="{52dbf6ab-d798-4273-b51a-7fd01ccbcd03}" Name="team_name" DisplayName="team_name" Type="Text" Required="TRUE" Group="Custom Site Columns"></Field><Field ID="{8821a891-039a-4109-b746-abd95d414385}" Name="child_teams" DisplayName="child_teams" Type="Text" Required="FALSE" Group="Custom Site Columns"></Field></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="parent_team" /><FieldRef Name="team_color" /><FieldRef Name="team_ID" /><FieldRef Name="team_level" /><FieldRef Name="team_manager" /><FieldRef Name="team_members" /><FieldRef Name="team_name" /><FieldRef Name="child_teams" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

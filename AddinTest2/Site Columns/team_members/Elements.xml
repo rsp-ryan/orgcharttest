@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{c37805ec-74bd-49e0-9f5a-f31d5c039317}"
+       Name="team_members"
+       DisplayName="team_members"
+       Type="UserMulti"
+       Required="FALSE"
+       UserSelectionMode="PeopleOnly"
+       Group="Custom Site Columns">
+  </Field>
+</Elements>

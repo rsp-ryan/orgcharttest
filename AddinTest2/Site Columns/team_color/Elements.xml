@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{237d4901-f3dc-4aaf-9142-4e4460c73b43}"
+       Name="team_color"
+       DisplayName="team_color"
+       Type="Text"
+       Required="FALSE"
+       Group="Custom Site Columns">
+  </Field>
+</Elements>
